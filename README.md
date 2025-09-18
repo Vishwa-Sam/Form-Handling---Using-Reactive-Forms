@@ -38,8 +38,8 @@ Form control states tracked with observables for validation status and value cha
 
 ---
 
-## Core Concepts Explained
-Reactive Forms Architecture
+# Core Concepts Explained
+## Reactive Forms Architecture
 The form model, including all controls and groups, is explicitly created in the component TypeScript file.
 
 The form model is built using new FormGroup(), with nested FormControl and FormArray instances describing individual fields or dynamic arrays of fields.
@@ -50,7 +50,9 @@ The template binds to the form model using the [formGroup] directive and individ
 
 Angular manages form state reactively using observables, allowing subscription to changes and dynamic logic.
 
-Custom Validators
+---
+
+## Custom Validators
 Custom synchronous validators are functions that take a control and return either null (valid) or an error object.
 
 These validators are attached to form controls or groups to implement any specific validation logic beyond built-in Angular validators.
@@ -60,12 +62,16 @@ Forms can be structured hierarchically with nested FormGroup instances to repres
 
 This allows modeling complex forms with nested data structure.
 
-FormArrays
+---
+
+## FormArrays
 FormArray is a reactive form collection type enabling dynamic addition and removal of controls or groups.
 
 Useful for lists of inputs such as multiple skills, addresses, or phone numbers.
 
-Custom Validator Factory Functions
+---
+
+## Custom Validator Factory Functions
 To create reusable and configurable validators, factory functions return validator functions that Angular calls during validation. This pattern allows passing parameters to tailor validation logic.
 
 ---
